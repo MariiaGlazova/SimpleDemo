@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/simple")
 
 public class SimpleController {
-
+    private static final String SOME_KEY = "KEY";
     private static final String SUCCESS_STATUS = "success";
     private static final String ERROR_STATUS = "error";
     private static final int SUCCESS_STATUS_CODE = 1;
@@ -23,8 +23,7 @@ public class SimpleController {
     public BaseResponse pay(@RequestParam(value = "key") String key, @RequestBody SimpleRequest request) {
 
         final BaseResponse response;
-        String SOME_KEY = "KEY";
-
+        
         if (SOME_KEY.equalsIgnoreCase(key)) {
             Logger logger = LoggerFactory.getLogger(SimpleRequest.class);
             logger.info("UserId = {}.", request.getUserId());
