@@ -34,6 +34,8 @@ public class SimpleController {
             logger.info("Name = {}.", request.getName());
             logger.info("SomeData = {}.", request.getSomeData());
 
+            simpleService.doSomething();
+
             response = new BaseResponse(SUCCESS_STATUS, SUCCESS_STATUS_CODE);
         } else {
             response = new BaseResponse(ERROR_STATUS, ERROR_STATUS_CODE);
