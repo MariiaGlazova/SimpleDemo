@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class SimpleServiceImpl implements SimpleService {
 
-    @Value("${spring.application.name}")
+    @Value("${default.name}")
     String name;
 
     @Override
