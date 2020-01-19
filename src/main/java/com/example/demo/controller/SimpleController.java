@@ -1,5 +1,8 @@
-package com.example.demo;
+package com.example.demo.controller;
 
+import com.example.demo.pojo.BaseResponse;
+import com.example.demo.pojo.SimpleRequest;
+import com.example.demo.service.impl.SimpleServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
